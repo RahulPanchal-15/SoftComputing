@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perceptron Gates</title>
+  <link rel="stylesheet" href="index.css">
+
+</head>
+
+<body>
+
+  <div id="container">
+    <h3>Perceptron Gates</h3>
+    <div id="sliderDiv">
+      w1:
+      <input type="text" value="0" id="w1Text" onchange="listenToSlider(this,'w1')">
+      <input type="range" min="-500" max="500" value="0" class="slider" id="w1">
+    </div>
+    <div id="sliderDiv">
+      w2:
+      <input type="text" value="0" id="w2Text" onchange="listenToSlider(this,'w2')">
+      <input type="range" min="-500" max="500" value="0" class="slider" id="w2">
+    </div>
+    <div id="sliderDiv">
+      Bias:
+      <input type="text" value="0" id="biasText" onchange="listenToSlider(this,'bias')">
+      <input type="range" min="-100" max="100" value="0" class="slider" id="bias">
+    </div>
+    <div id="sliderDiv">
+      Threshold:
+      <input type="text" value="0.5" id="thresholdText" onchange="listenToSlider(this,'threshold')">
+      <input type="range" min="0" max="100" value="50" class="slider" id="threshold">
+    </div>
+    <br>
+
+    x1:
+    <input type="text" value="0" disabled id="x1Text">
+    <input type="range" min="0" max="100" value="0" class="slider" id="x1">
+    <br>
+    x2:
+    <input type="text" value="1" disabled id="x2Text">
+    <input type="range" min="0" max="100" value="100" class="slider" id="x2">
+
+    </hr>
+    <br>
+    <br>
+    Output:<input type="text" value="-" disabled id="outputText" width="5">
+    <br>
+    This configuration behaves like <input type="text" value="-" disabled id="gate"> Gate.
+    <br>
+    <br>
+    <table border="1" style="width: 30%;margin: auto;">
+      <th w>x1</th>
+      <th>x2</th>
+      <th>Result</th>
+      <tr>
+        <td>0</td>
+        <td>0</td>
+        <td id="v1">0</td>
+      </tr>
+      <tr>
+        <td>0</td>
+        <td>1</td>
+        <td id="v2">0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>0</td>
+        <td id="v3">0</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>1</td>
+        <td id="v4">0</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <script src="index.js"></script>
+</body>
+
+</html>
